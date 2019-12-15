@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Memuntum</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div id="js-clockContainer">
+        <div id="js-clockTitle"></div>
+        <h2 id="js-clock"></h2>
+    </div>
+
+    <div id="js-greetingContainer">
+        <h1 id="js-greetingTitle">Hello, what's your name?</h1>
+        <form id="js-greetingForm">
+            <input id="js-greetingInput" type="text" placeholder="Write a your name" />
+        </form>
+    </div>
+
+    <div id="js-toDoContainer">        
+        <form id="js-toDoForm">
+            <input id="js-toDoInput" type="text" placeholder="Add task" />
+        </form>
+        <div id="listContainer">
+            <div class="pendingContainer">
+                <h1>Pending</h1>
+                <ul id="js-pendingList"></ul>
+            </div>
+            <div class="finishedContainer">
+                <h1>Finished</h1>
+                <ul id="js-finishedList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="js-weatherContainer">
+        <div id="js-weather">
+        </div>
+    </div>
+
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+</body>
+</html>
