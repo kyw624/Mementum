@@ -23,9 +23,10 @@ function getName() {
 }
 
 function paintGreeting(text) {
+    const currentHours = new Date().getHours();
     greetingForm.classList.add(SHOWING_CN);
     toDoContainer.classList.remove(SHOWING_CN);
-    greetingTitle.innerText = `Hello ${text}!`;
+    greetingTitle.innerText = `Good ${currentHours >= 6 && currentHours < 12 ? `morning` : currentHours < 18 ? `afternoon` : `evening`}, ${text}!`;
 }
 
 function loadName() {

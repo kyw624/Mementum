@@ -1,4 +1,6 @@
-const weather = document.getElementById("js-weather");
+const weathers = document.getElementById("js-weather");
+const weatherOverlay = document.getElementById("js-weatherOverlay");
+const weatherIcon = document.getElementById("js-weatherIcon");
 
 const API_KEY = "67957a4a6ace57821302417522a9dad1";
 const COORDS = "coords";
@@ -10,7 +12,11 @@ function getWeather(lat, lon) {
     }).then(function(json) {
         const temperature = json.main.temp;
         const place = json.name;
-        weather.innerText = `${temperature} @ ${place}`
+        const status = json.weather[0].main;
+        weathers.innerText =
+        `${status} / ${temperature} ℃
+        @ ${place}
+        `;
     });
 }
 
@@ -30,7 +36,7 @@ function handleGeoSucces(position) {
 }
 
 function handleGeoError() {
-    alert("지역을 찾지 못했습니다.")
+    weathers.innerText = "Geolocation not found.";
 }
 
 function askForCoords() {
