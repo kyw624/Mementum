@@ -2,7 +2,7 @@ const IMG_NUMBER = 6;
 
 function paintImage(imgNumber) {
     const img = new Image();
-    img.src = `images/${imgNumber}.jpg`;
+    img.src = `images/${imgNumber}.png`;
     img.onload = function() {
         document.body.prepend(img);
         img.classList.add("bgImage");
