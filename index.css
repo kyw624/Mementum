@@ -1,3 +1,9 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     height: 100%;
     display: flex;
@@ -20,12 +26,17 @@ body {
 #js-toDoContainer,
 #js-weatherContainer {
     text-align: center;
+    animation: fadeIn 1s 1.5s linear;
+    animation-fill-mode: both;
+}
+
+#js-clockContainer,
+#js-greetingContainer,
+#js-weatherContainer {
 }
 
 #js-clockContainer {
-    margin-top: 60px;
-    justify-content: center;
-    align-items: center;
+    margin-top: 40px;
 }
 
 #js-clock,
@@ -85,7 +96,7 @@ body {
 
 #listContainer {
     display: flex;
-    padding: 30px 15%;
+    padding: 15px 15%;
     justify-content: space-around;
     left: 50%;
 }
@@ -120,13 +131,14 @@ li:hover {
     margin: 0;
     padding: 0;
     height:100px;
+    animation: fadeIn 1.5s 1.2s ease;
 }
 
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    100% {
         opacity: 1;
     }
 }
@@ -134,9 +146,12 @@ li:hover {
 .bgImage {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    bottom: 0;
+	width: 100%;
     height: 100%;
     z-index: -1;
-    animation: fadeIn .7s linear;
+	background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    animation: fadeIn 1s linear;
 }
